@@ -5,6 +5,6 @@ var cards = require("./cards.js");
 
 window.onload = () => 
 ReactDOM.render(
-	React.createElement(UI),
+	React.createElement(UI, {cards, list: [1, 1]}),
 	document.getElementById("main")
 );
