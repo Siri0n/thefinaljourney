@@ -28,7 +28,8 @@
 }
 
 .text{
-	font: 14pt sans-serif;
+	font: 12pt serif;
+	text-align: center;
 }
 
 .icon-container{

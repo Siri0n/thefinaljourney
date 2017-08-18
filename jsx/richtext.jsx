@@ -1,7 +1,7 @@
 var React = require("react");
 
 function RichText({text}){
-	return <div>
+	return <div className="text">
 		{tokenize(text).map((token, i) => {
 			if(typeof token == "string"){
 				return <span key={i}>{token}</span>;
@@ -26,9 +26,9 @@ var templates = {
 		n -= 0;
 		var src;
 		if(type == "p"){
-			src = "img/physicalAttack.png";
+			src = "img/attack_p.png";
 		}else if(type == "m"){
-			src = "img/magicalAttack.png";
+			src = "img/attack_m.png";
 		}
 		return <div key={key} className="icon-container">
 			{Array.apply(null, Array(n)).map((_, i) => {
@@ -42,11 +42,11 @@ var templates = {
 		n -= 0;
 		var src;
 		if(type == "p"){
-			src = "img/physicalDefence.png";
+			src = "img/defence_p.png";
 		}else if(type == "m"){
-			src = "img/magicalDefence.png";
+			src = "img/defence_m.png";
 		}else if(type == "u"){
-			src = "img/universalDefence.png";
+			src = "img/defence_u.png";
 		}
 		return <div key={key} className="icon-container">
 			{Array.apply(null, Array(n)).map((_, i) => {
@@ -57,10 +57,14 @@ var templates = {
 		</div>
 	},
 	or(key){
-		return
-	},
-	then(){
+		return <div key={key} className="br">
 
+		</div>
+	},
+	then(key){
+		return <div key={key} className="br">
+
+		</div>
 	}
 }
 module.exports = RichText;
