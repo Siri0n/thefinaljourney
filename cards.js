@@ -24,7 +24,28 @@ var cards = [
 		text: "Даёт игроку {defence p 1}{defence m 1}{defence u 1}, дабы монстр не смог добраться до его ануса.",
 		border: "example.jpg",
 		footer: "Пример",
-		number: "2"
+		number: "3"
+	},
+	{
+		id: 4,
+		type: "example",
+		name: "Дихотомия Эскабара",
+		text: "{attack m 1}{or}{attack p 1}",
+		border: "example.jpg",
+		footer: "Пример",
+		number: "4"
+	},
+	{
+		id: 5,
+		type: "enemyAttack",
+		name: "Дёрнуть анус",
+		diagram: {
+			"ABC": "{attack p 1}",
+			">DEF": "{attack m 2}{attack p 2}"
+		},
+		text: "+1 морального урона против самого игрока",
+		footer: "Анальное угнетение",
+		number: "I"
 	}
 ]
 

@@ -1,7 +1,8 @@
 var React = require("react");
 
 var cardTypes = {
-	example: require("./example.jsx")
+	example: require("./example.jsx"),
+	enemyAttack: require("./enemyAttack.jsx")
 }
 
 function Card(props){
