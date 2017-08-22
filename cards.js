@@ -6,7 +6,7 @@ var cards = [
 		text: "Наносит {attack p 2} охуевшему от ужаса монстру.",
 		border: "example.jpg",
 		footer: "Пример",
-		number: "1"
+		corner: "img/example_corner.png"
 	},
 	{
 		id: 2,
@@ -15,7 +15,7 @@ var cards = [
 		text: "Наносит {attack m 2} монстру, деморализуя его к ебеням.",
 		border: "example.jpg",
 		footer: "Пример",
-		number: "2"
+		corner: "img/example_corner1.png"
 	},
 	{
 		id: 3,
@@ -24,7 +24,7 @@ var cards = [
 		text: "Даёт игроку {defence p 1}{defence m 1}{defence u 1}, дабы монстр не смог добраться до его ануса.",
 		border: "example.jpg",
 		footer: "Пример",
-		number: "3"
+		corner: "img/example_corner2.png"
 	},
 	{
 		id: 4,
@@ -33,7 +33,7 @@ var cards = [
 		text: "{attack m 1}{or}{attack p 1}",
 		border: "example.jpg",
 		footer: "Пример",
-		number: "4"
+		corner: "img/example_corner.png"
 	},
 	{
 		id: 5,
@@ -45,7 +45,30 @@ var cards = [
 		},
 		text: "+1 морального урона против самого игрока",
 		footer: "Анальное угнетение",
-		number: "I"
+		corner: "I"
+	},
+	{
+		id: 6,
+		type: "enemyAttack",
+		name: "Аццкие стрелочки",
+		diagram: {
+			">BCF": "{attack m 2}{attack p 1}",
+			">EDA": "{attack p 2}{attack m 1}"
+		},
+		text: "Игроки страдают от тестирования",
+		footer: "Анальное угнетение",
+		corner: "II"
+	},
+	{
+		id: 7,
+		type: "enemyAttack",
+		name: "Инфернальные стрелочки",
+		diagram: {
+			">AFBDCE": "{attack m 3}{attack p 3}"
+		},
+		text: "Игроки страдают от страдания",
+		footer: "Анальное угнетение",
+		corner: "III"
 	}
 ]
 

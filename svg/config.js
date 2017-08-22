@@ -29,4 +29,22 @@ module.exports = [
 		height: 128,
 		width: null
 	},
+	{
+		in: "экипировка чб/амулет.svg",
+		out: "example_corner.png",
+		height: 128,
+		width: null
+	},
+	{
+		in: "экипировка чб/оружие 1.svg",
+		out: "example_corner1.png",
+		height: 128,
+		width: null
+	},
+	{
+		in: "экипировка чб/щит.svg",
+		out: "example_corner2.png",
+		height: 128,
+		width: null
+	}
 ]
