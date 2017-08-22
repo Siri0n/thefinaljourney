@@ -47,24 +47,34 @@
 	bottom: 0;
 	left: 0;
 	border-top: 1px solid black;
-	padding: 0 0.2in;
+	padding-right: 0.2in;
 	box-sizing: border-box;
 	text-align: center;
 }
 
-.number{
+.corner{
 	width: 0.4in;
 	height: 0.4in;
 	line-height: 0.4in;
 	text-align: center;
-	border-radius: 50%;
+	border-radius: 0.3in 0.1in 0.3in 0.1in;
 	position: absolute;
-	bottom: -1px;
-	right:  -1px;
+	bottom: calc(0px - 0.1in - 2px);
+	right: calc(0px - 0.1in - 2px);
 	border: 1px solid black;
 	background-color: white;
 }
 
+.corner > img {
+	max-height: 0.2in;
+	max-width: 0.2in;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
 .separator{
 	display: block;
 	width: 100%;
@@ -94,11 +104,19 @@
 	width: 100%;
 	text-align: center;
 }
-.diagram table{
-	display: inline-block;
-}
 .diagram td{
 	width: 0.5in;
 	height: 0.5in;
 	border: 1px solid black;
+}
+.diagram > div{
+	position:relative;
+	display: inline-block;
+}
+.diagram svg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
