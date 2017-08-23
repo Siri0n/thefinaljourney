@@ -36,7 +36,7 @@ module.exports = [
 		width: null
 	},
 	{
-		in: "экипировка чб/оружие 1.svg",
+		in: "экипировка чб/оружие.svg",
 		out: "example_corner1.png",
 		height: 128,
 		width: null
@@ -44,6 +44,12 @@ module.exports = [
 	{
 		in: "экипировка чб/щит.svg",
 		out: "example_corner2.png",
+		height: 128,
+		width: null
+	},
+	{
+		in: "экипировка чб/амулет большой.svg",
+		out: "example_corner3.png",
 		height: 128,
 		width: null
 	}

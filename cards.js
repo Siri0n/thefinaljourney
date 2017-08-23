@@ -33,7 +33,7 @@ var cards = [
 		text: "{attack m 1}{or}{attack p 1}",
 		border: "example.jpg",
 		footer: "Пример",
-		corner: "img/example_corner.png"
+		corner: "img/example_corner3.png"
 	},
 	{
 		id: 5,
