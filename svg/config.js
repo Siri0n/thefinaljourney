@@ -1,7 +1,13 @@
-module.exports = [
+﻿module.exports = [
 	{
 		in: "действие чб/физ.урон.svg",
 		out: "attack_p.png",
+		height: 128,
+		width: null
+	},
+	{
+		in: "действие чб/step.svg",
+		out: "step.png",
 		height: 128,
 		width: null
 	},
