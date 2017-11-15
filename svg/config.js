@@ -2,55 +2,66 @@ module.exports = [
 	{
 		in: "действие чб/физ.урон.svg",
 		out: "attack_p.png",
-		height: 128,
-		width: null
+		width: 128
 	},
 	{
 		in: "действие чб/mdam4.svg",
 		out: "attack_m.png",
-		height: 128,
-		width: null
+		width: 128
 	},
 		{
 		in: "действие чб/физ блок.svg",
 		out: "defence_p.png",
-		height: 128,
-		width: null
+		width: 128
 	},
 	{
 		in: "действие чб/маг блоr.svg",
 		out: "defence_m.png",
-		height: 128,
-		width: null
+		width: 128
 	},
 	{
 		in: "действие чб/унив блок.svg",
 		out: "defence_u.png",
-		height: 128,
-		width: null
+		width: 128
+	},
+	{
+		in: "действие чб/лечение.svg",
+		out: "health.png",
+		width: 128
 	},
 	{
 		in: "экипировка чб/амулет.svg",
 		out: "example_corner.png",
-		height: 128,
-		width: null
+		width: 128
 	},
 	{
 		in: "экипировка чб/оружие.svg",
-		out: "example_corner1.png",
-		height: 128,
-		width: null
+		out: "equipment/weapon.png",
+		width: 128
 	},
 	{
 		in: "экипировка чб/щит.svg",
-		out: "example_corner2.png",
-		height: 128,
-		width: null
+		out: "equipment/shield.png",
+		width: 128
 	},
 	{
 		in: "экипировка чб/амулет большой.svg",
-		out: "example_corner3.png",
-		height: 128,
-		width: null
+		out: "equipment/amulet.png",
+		width: 128
+	},
+	{
+		in: "экипировка чб/arm.svg",
+		out: "equipment/armor.png",
+		width: 128
+	},
+	{
+		in: "персонажи/gunnhilda 2.svg",
+		out: "characters/warrior.png",
+		width: 512
+	},
+	{
+		in: "персонажи/agness2.svg",
+		out: "characters/thief.png",
+		width: 512
 	}
 ]

@@ -50,11 +50,34 @@ var templates = {
 		}
 		return <Times {...{key, src, n}}/>
 	},
+	health(key, [n]){
+		n -= 0;
+		var src = "img/health.png";
+		return <Times {...{key, src, n}}/>
+	},
 	or(key){
 		return <Separator key={key} text="ИЛИ"/>
 	},
 	then(key){
 		return <Separator key={key} text="ЗАТЕМ"/>
+	},
+	onturnend(key){
+		return <Separator key={key} text="В КОНЦЕ ХОДА"/>
+	},
+	br(key){
+		return <br key={key}/>
+	},
+	use(key, [what]){
+		var dict = {
+			weapon: "img/equipment/weapon.png",
+			armor: "img/equipment/armor.png",
+			shield: "img/equipment/shield.png",
+			amulet: "img/equipment/amulet.png",
+		};
+		return <div key={key} className="icon-container">
+			Использовать
+			<img className="icon" src={dict[what]}/>
+		</div>
 	}
 }
 module.exports = RichText;

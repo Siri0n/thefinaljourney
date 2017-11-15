@@ -1,8 +1,8 @@
 var gulp = require("gulp"),
 	browserify = require("browserify"),
-	source = require("vinyl-source-stream");
-	gm = require("gm")
-	fs = require("fs");
+	source = require("vinyl-source-stream"),
+	fs = require("fs"),
+	Inkscape = require("inkscape");
 
 var b = browserify({
 	entries: ["main.js"],
@@ -30,15 +30,15 @@ gulp.task("default", ["browserify"]);
 
 var config = require("./svg/config.js");
 
-function convert(input, output, height, width){
+function convert(input, output, width, nocrop){
 	return new Promise(function(resolve, reject){
-		gm(input)
-			.background("transparent")
-			.trim()
-			.resize(width, height, "!")
-			.write(output, function(err){
-				err ? reject(err) : resolve();
-			})
+		var read = fs.createReadStream(input),
+			write = fs.createWriteStream(output);
+		var options = ["--export-png", "--export-width=" + width];
+		if(!nocrop){
+			options.push("--export-area-drawing");
+		}
+		read.pipe(new Inkscape(options)).pipe(write).on("close", resolve);
 	})
 }
 
@@ -49,7 +49,8 @@ gulp.task("convert", function(){
 				"svg/" + entry.in, 
 				"img/" + entry.out, 
 				entry.width, 
-				entry.height)
+				entry.nocrop
+			);
 		})
 	).then(
 		function(){
