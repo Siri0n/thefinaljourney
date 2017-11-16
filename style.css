@@ -48,6 +48,11 @@
 	text-align: center;
 }
 
+.big{
+	text-align: center;
+	display: inline;
+}
+
 .icon-container{
 	display: inline-block;
 }
@@ -55,9 +60,12 @@
 .icon{
 	display: inline;
 	height: 14pt;
-	margin-bottom: -3pt;
+	vertical-align: middle;
 }
 
+.icon.big{
+	height: 21pt;
+}
 .image-main{
 	flex: 0 0 1in;
 	height: 1in;
@@ -160,4 +168,5 @@
 
 .useFrom td{
 	border: 1px solid black;
+	padding: 0.1in;
 }

@@ -28,7 +28,7 @@ function tokenize(text){
 }
 
 var templates = {
-	attack(key, [type, n]){
+	attack(key, [type, n, size]){
 		n -= 0;
 		var src;
 		if(type == "p"){
@@ -36,9 +36,9 @@ var templates = {
 		}else if(type == "m"){
 			src = "img/attack_m.png";
 		}
-		return <Times {...{key, src, n}}/>
+		return <Times {...{key, src, n, size}}/>
 	},
-	defence(key, [type, n]){
+	defence(key, [type, n, size]){
 		n -= 0;
 		var src;
 		if(type == "p"){
@@ -48,12 +48,12 @@ var templates = {
 		}else if(type == "u"){
 			src = "img/defence_u.png";
 		}
-		return <Times {...{key, src, n}}/>
+		return <Times {...{key, src, n, size}}/>
 	},
-	health(key, [n]){
+	health(key, [n, size]){
 		n -= 0;
 		var src = "img/health.png";
-		return <Times {...{key, src, n}}/>
+		return <Times {...{key, src, n, size}}/>
 	},
 	or(key){
 		return <Separator key={key} text="ИЛИ"/>
@@ -61,22 +61,29 @@ var templates = {
 	then(key){
 		return <Separator key={key} text="ЗАТЕМ"/>
 	},
+	may(key){
+		return <Separator key={key} text="МОЖНО"/>
+	},
 	onturnend(key){
 		return <Separator key={key} text="В КОНЦЕ ХОДА"/>
 	},
 	br(key){
 		return <br key={key}/>
 	},
-	use(key, [what]){
+	use(key, [what, size]){
 		var dict = {
 			weapon: "img/equipment/weapon.png",
 			armor: "img/equipment/armor.png",
 			shield: "img/equipment/shield.png",
 			amulet: "img/equipment/amulet.png",
 		};
+		var iconClass = "icon";
+		if(size){
+			iconClass += " big"; 
+		}
 		return <div key={key} className="icon-container">
-			Использовать
-			<img className="icon" src={dict[what]}/>
+			{"Использовать  "}
+			<img className={iconClass} src={dict[what]}/>
 		</div>
 	}
 }

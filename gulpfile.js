@@ -31,6 +31,7 @@ gulp.task("default", ["browserify"]);
 var config = require("./svg/config.js");
 
 function convert(input, output, width, nocrop){
+	console.log(input, output, width);
 	return new Promise(function(resolve, reject){
 		var read = fs.createReadStream(input),
 			write = fs.createWriteStream(output);

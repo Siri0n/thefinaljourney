@@ -20,7 +20,7 @@ function Diagram({data}){
 	data.split("").forEach(cell => {
 		var [x, y] = coords[cell];
 		tableContent[x][y] = true;
-	})
+	});
 
 	return <table className="useFrom"><tbody>
 		{tableContent.map((row, i) => 
@@ -28,8 +28,8 @@ function Diagram({data}){
 			{row.map((cell, j) => 
 			<td key={j}>
 				{cell ?
-				<img src="img/png/ok.png"/> :
-				<img src="img/png/not_ok.png"/>
+				<img src="img/ok.png"/> :
+				<img src="img/not_ok.png"/>
 				}
 			</td>
 			)}

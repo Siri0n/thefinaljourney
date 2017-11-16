@@ -126,12 +126,12 @@ var characters = [
 	}
 ];
 
-var basic = [
+var basicWarrior = [
 	{
 		id: "skill_warrior_1",
 		type: "skill",
 		name: "Выпад",
-		description: "Шаг {then} {use weapon}",
+		description: "Шаг {then} {use weapon big}",
 		background: "png/skill.png",
 		footer: "Базовый/Воин"
 	},
@@ -139,7 +139,7 @@ var basic = [
 		id: "skill_warrior_2",
 		type: "skill",
 		name: "Удар щитом",
-		description: "{attack p 1} {then} {use shield}",
+		description: "{attack p 1 big} {then} {use shield big}",
 		background: "png/skill.png",
 		footer: "Базовый/Воин"
 	},
@@ -147,7 +147,7 @@ var basic = [
 		id: "skill_warrior_3",
 		type: "skill",
 		name: "Со щитом или без щита",
-		description: "{defence p 1} себе или соседу {or} {use shield}",
+		description: "{defence p 1 big} себе или соседу {or} {use shield big}",
 		background: "png/skill.png",
 		footer: "Базовый/Воин"
 	},
@@ -155,7 +155,7 @@ var basic = [
 		id: "skill_warrior_4",
 		type: "skill",
 		name: "Стальные бока",
-		description: "{defence p 1} {or} {use armor}",
+		description: "{defence p 1 big} {or} {use armor big}",
 		background: "png/skill.png",
 		footer: "Базовый/Воин"
 	},
@@ -164,7 +164,7 @@ var basic = [
 		type: "skill",
 		name: "Пробить броню",
 		useFrom: "ABC",
-		description: "{attack p 2} {br} Двойной урон против блока.",
+		description: "{attack p 2 big} {br} Двойной урон против блока.",
 		background: "png/skill.png",
 		footer: "Базовый/Воин"
 	},
@@ -172,7 +172,7 @@ var basic = [
 		id: "skill_warrior_6",
 		type: "skill",
 		name: "Отвлекающий манёвр",
-		description: "{attack p 1} {br} {defence p 1} другим игрокам в своём ряду.",
+		description: "{attack p 1 big} {br} {defence p 1 big} другим игрокам в своём ряду.",
 		background: "png/skill.png",
 		footer: "Базовый/Воин"
 	},
@@ -181,7 +181,7 @@ var basic = [
 		type: "skill",
 		name: "Мощный пинок",
 		useFrom: "ABC",
-		description: "{attack p 1} {then} переместиться назад, если свободно.",
+		description: "{attack p 1 big} {then} переместиться назад, если свободно.",
 		background: "png/skill.png",
 		footer: "Базовый/Воин"
 	},
@@ -189,13 +189,85 @@ var basic = [
 		id: "skill_warrior_8",
 		type: "skill",
 		name: "Не верю в фей",
-		description: "{defence p 1} {onturnend} нанести противнику {attack m 1} за каждую единицу заблокированного урона.",
+		description: "{defence m 1 big} {onturnend} нанести противнику {attack m 1} за каждую единицу заблокированного урона.",
 		background: "png/skill.png",
 		footer: "Базовый/Воин"
 	},
 ];
 
+var basicCleric = [
+	{
+		id: "skill_cleric_1",
+		type: "skill",
+		name: "Помощь ближнему",
+		description: "{defence p 1} соседу {or} {use shield}",
+		background: "png/skill.png",
+		footer: "Базовый/Жрец"
+	},
+	{
+		id: "skill_cleric_2",
+		type: "skill",
+		name: "Духовная защита",
+		description: "{defence m 1} всем соседям {or} {use armor}",
+		background: "png/skill.png",
+		footer: "Базовый/Жрец"
+	},
+	{
+		id: "skill_cleric_3",
+		type: "skill",
+		name: "Отдохновение",
+		description: "{health 1} {then} {use armor}",
+		background: "png/skill.png",
+		footer: "Базовый/Жрец"
+	},
+	{
+		id: "skill_cleric_4",
+		type: "skill",
+		name: "Гулять по воде",
+		description: "Шаг {or} {use amulet}",
+		background: "png/skill.png",
+		footer: "Базовый/Жрец"
+	},
+	{
+		id: "skill_cleric_5",
+		type: "skill",
+		name: "Аура исцеления",
+		useFrom: "ABC",
+		description: "{health 1} себе и всем соседям",
+		background: "png/skill.png",
+		footer: "Базовый/Жрец"
+	},
+	{
+		id: "skill_cleric_6",
+		type: "skill",
+		name: "Спасение",
+		description: "{defence u 1} любому игроку.",
+		background: "png/skill.png",
+		footer: "Базовый/Жрец"
+	},
+	{
+		id: "skill_cleric_7",
+		type: "skill",
+		name: "Посредник",
+		useFrom: "ABC",
+		description: "{attack m 1} {br} {health 2} игроку сзади",
+		background: "png/skill.png",
+		footer: "Базовый/Жрец"
+	},
+	{
+		id: "skill_cleric_8",
+		type: "skill",
+		name: "Добро с кулаками",
+		description: "{attack p 1} {may} шаг в сторону",
+		background: "png/skill.png",
+		footer: "Базовый/Жрец"
+	},
+];
+
+var basic = basicWarrior.concat(basicCleric);
 var cards = characters.concat(basic);
+
+
 var final = {};
 
 cards.forEach(card => {

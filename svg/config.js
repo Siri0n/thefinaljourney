@@ -7,8 +7,7 @@
 	{
 		in: "действие чб/step.svg",
 		out: "step.png",
-		height: 128,
-		width: null
+		width: 128
 	},
 	{
 		in: "действие чб/mdam4.svg",
@@ -69,5 +68,15 @@
 		in: "персонажи/agness2.svg",
 		out: "characters/thief.png",
 		width: 512
+	},
+	{
+		in: "всякое/галка 2.svg",
+		out: "ok.png",
+		width: 30
+	},
+	{
+		in: "всякое/крестик2.svg",
+		out: "not_ok.png",
+		width: 30
 	}
 ]
