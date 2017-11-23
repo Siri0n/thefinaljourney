@@ -52,7 +52,9 @@ function Diagram({data}){
 		[null, null, null]
 	];
 	var paths = [];
-
+	if(!data){
+		return null;
+	}
 	Object.keys(data).forEach(key => {
 		var cells;
 		if(key[0] == ">"){
@@ -85,9 +87,9 @@ function Diagram({data}){
         			orient="auto" refX="4" refY="2">
   					<path d="M0,0 L4,2 L0,4" />
 				</marker>
-				<marker id="start" markerWidth="1" markerHeight="4"
-        			orient="auto" refX="0" refY="2">
-  					<path d="M0,0 L1,0 L1,4 L0,4" />
+				<marker id="start" markerWidth="4" markerHeight="4"
+        			orient="auto" refX="1" refY="1">
+  					<circle cx="1" cy="1" r="1"/>
 				</marker>
 			</defs>
 			{paths.map((d, i) =>

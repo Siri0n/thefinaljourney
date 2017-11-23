@@ -1,11 +1,16 @@
+#main{
+	font-size: 0;
+}
+
 .card{
 	display: inline-block;
-	margin: 0.2in;
+	/*margin: 0.2in;*/
 	width: 2.5in;
 	height: 3.5in;
 	border-radius: 0.3in;
 	border: 1px solid black;
 	position: relative;
+	font-size: 12pt;
 }
 
 .inner{
@@ -69,7 +74,11 @@
 .image-main{
 	flex: 0 0 1in;
 	height: 1in;
-	text-align: center;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .image-main > img{
@@ -90,6 +99,7 @@
 
 .corner + .footer{
 	padding-right: 0.2in;
+	z-index: 1;
 } 
 
 .corner{
@@ -104,6 +114,7 @@
 	border: 1px solid black;
 	background-color: white;
 	margin-bottom: 0;
+	z-index: 2;
 }
 
 .corner > img {
@@ -169,4 +180,24 @@
 .useFrom td{
 	border: 1px solid black;
 	padding: 0.1in;
+}
+
+.block{
+	width: calc(100% - 0.1in);
+	border: 1px solid gray;
+	position: relative;
+	flex-grow: 0.5;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.block > .caption{
+	position: absolute;
+	top: -0.12in;
+	left: 0.1in;
+	padding-left: 0.05in;
+	padding-right: 0.05in;
+	background-color: white;
 }

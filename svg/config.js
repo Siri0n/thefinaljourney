@@ -70,6 +70,16 @@
 		width: 512
 	},
 	{
+		in: "персонажи/нафаня2.svg",
+		out: "characters/mage.png",
+		width: 512
+	},
+	{
+		in: "персонажи/клерик 1.svg",
+		out: "characters/cleric.png",
+		width: 512
+	},
+	{
 		in: "всякое/галка 2.svg",
 		out: "ok.png",
 		width: 30
@@ -78,5 +88,26 @@
 		in: "всякое/крестик2.svg",
 		out: "not_ok.png",
 		width: 30
+	},
+	{
+		in: "монстры/тыковка 1 B&W.svg",
+		out: "enemies/scarecrow.png",
+		width: 512
+	},
+	{
+		in: "монстры/эректус b&w.svg",
+		out: "enemies/cactus.png",
+		width: 512
+	},
+	{
+		in: "монстры/слайм.svg",
+		out: "enemies/slime.png",
+		width: 512,
+		nocrop: true
+	},
+	{
+		in: "монстры/p4ela.svg",
+		out: "enemies/bee.png",
+		width: 512
 	}
 ]

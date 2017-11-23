@@ -67,6 +67,9 @@ var templates = {
 	onturnend(key){
 		return <Separator key={key} text="В КОНЦЕ ХОДА"/>
 	},
+	onhit(key){
+		return <Separator key={key} text="ПРИ ПОПАДАНИИ"/>
+	},
 	br(key){
 		return <br key={key}/>
 	},
